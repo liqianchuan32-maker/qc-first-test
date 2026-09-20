@@ -8,7 +8,7 @@ Vec3 operator*(const Mat3& R, const Vec3& p) {
     };
 }//运算符重载
 Vec3 operator+(const Vec3& a, const Vec3& b){
-    return Vec3{a.x+b.y,a.y+b.y,+a.z+b.z};
+    return Vec3{a.x+b.x,a.y+b.y,+a.z+b.z};
 }
 //矩阵加法的运算符重载
 bool reprojectionPoint(const Vec3& Pw,
