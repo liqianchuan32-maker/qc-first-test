@@ -32,7 +32,7 @@ target_link_libraries(reprojection_demo
 enable_testing()
 
 add_executable(test_reprojection
-    tests/test_reprojection.cpp
+    test/test_reprojection.cpp
 )
 
 target_link_libraries(test_reprojection

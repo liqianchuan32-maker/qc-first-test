@@ -22,7 +22,14 @@ Vec3 operator+(const Vec3& a, const Vec3& b);//矩阵加法
 //Mat3为相机的朝向
 struct Camera{
     double fx,fy,cx,cy;
-    Mat3 R=Mat3::idendity();//相机旋转矩阵
+    Mat3 R=Mat3::idendity(){
+        Mat3 R{};
+        R.m[0][0]=1.0;
+        R.m[1][1]=1.0;
+        R.m[2][2]=1.0;
+        return R;
+    }；
+};//相机旋转矩阵
     Vec3 t;//相机平移向量
 };//fx fy为像素，cx cy为主点像素坐标
 struct reprojectionResult{
